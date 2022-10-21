@@ -1,0 +1,117 @@
+/* 右边的收藏栏 */
+.collect-box {
+	width: 15vw;
+	/* 需要空格隔开 */
+	height: calc(100vh - 100px);
+	/* height: ; */
+	background-color: #ffffff;
+	position: fixed;
+	top: 100px;
+	/* bottom: 50px; */
+	right: -15vw;
+	/* display: none; */
+	transition: .5s;
+
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+	z-index: 29;
+}
+
+
+
+.collect-box>div {
+	width: 90%;
+	height: 100px;
+
+	margin: 10px auto;
+
+
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
+#collect-spread-btn {
+	width: 20px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, 0.5);
+	/* box-shadow: none; */
+	border-radius: 5px;
+	position: absolute;
+	left: -20px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	scale: 0.8;
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	transform: rotateY(0deg);
+	visibility: hidden;
+	-ms-transform: attr(transform);
+	/* IE 9 */
+	-moz-transform: attr(transform);
+	/* Firefox */
+	-webkit-transform: attr(transform);
+	/* Safari 和 Chrome */
+	-o-transform: attr(transform);
+	/* Opera */
+}
+
+#collect-spread-btn:hover {
+	scale: 0.85;
+	/* right: 1px; */
+}
+
+#collect-spread-btn>img {
+	width: 100%;
+	height: 100%;
+	scale: 0.8;
+}
+
+#collect-tools {
+	width: 100%;
+	height: 50px;
+
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	/* background-color: #dfdfdf; */
+	/* 清除默认格式 */
+	border-radius: 0px;
+	margin: 0;
+	margin-top: 10px;
+	box-shadow: none;
+}
+
+
+
+#collect-tools>div {
+	width: 60px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #fafafa;
+	text-align: center;
+	font-weight: 700;
+
+	transform: scale(0.9, 0.8);
+	border-radius: 10px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#collect-close {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#collect-close>img {
+	width: 15px;
+	height: 15px;
+	transform: rotate(180deg);
+}
+
+
+#collect-tools>div:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}

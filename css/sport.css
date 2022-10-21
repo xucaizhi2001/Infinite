@@ -1,0 +1,149 @@
+.content-box {
+	width: 100vw;
+	height: calc(100vh-100px);
+	/* background-color: #ffffff; */
+
+	box-sizing: border-box;
+	/* padding: 10px; */
+	position: absolute;
+	top: 100px;
+	/* left: 100px; */
+	margin: auto;
+
+
+	transition: width .5s;
+	/* overflow-y: hidden; */
+
+	/* border-radius: 10px;/* 
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); */
+	*/
+}
+
+#bg-box {
+	width: 100%;
+}
+
+
+#bg-box img {
+	width: 100%;
+	height: auto;
+}
+
+
+#personal {
+	/* width: 90vw; */
+	/* height: 400px; */
+}
+
+#players {
+	/* width: 90vw; */
+	/* height: 400px; */
+
+}
+
+#matchs {
+	/* width: 90vw; */
+	/* height: 400px; */
+}
+
+.content-box .title {
+	/* width: 300px; */
+	height: 60px;
+	font-size: 36px;
+	font-weight: 900;
+	margin: 30px 50px;
+	border-color: rgba(0, 0, 0, 0.3);
+	border-style: none none solid none;
+	border-width: 1px;
+}
+
+.content-box .items {
+	width: 90vw;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 30px;
+
+	margin: 0 auto;
+	z-index: 5;
+}
+
+.content-box .items>div {
+	margin: 10px;
+	position: relative;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	background-color: #ffffff;
+	z-index: 5;
+
+	/* flex */
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	align-items: center;
+}
+
+.content-box .items img {
+	width: 100%;
+	justify-self: center;
+	border-radius: 20px 20px 0 0;
+	transition: 0.5s;
+	z-index: 5;
+}
+
+.content-box .items img:hover {
+	z-index: 20;
+	transform: scale(1.25);
+	border-radius: 0;
+}
+
+.content-box .items p {
+	height: 50px;
+	line-height: attr(height);
+	font-size: 24px;
+	font-weight: 900;
+	text-align: left;
+	margin-left: 10px;
+}
+
+.content-box .items>div>div {
+	width: 90%;
+	height: 150px;
+	line-height: 30px;
+	text-align: left;
+	box-shadow: none;
+	border-radius: none;
+	margin-left: 10px;
+	text-indent: 2em;
+
+	/*让纯数字也可以换行显示*/
+	word-break: break-all;
+
+
+	/*将div变成弹性伸缩盒子模型
+	  display:box为display:flex的前身
+	  需要加浏览器私有属性来支持
+	*/
+	display: -webkit-box;
+	/*设置或检索伸缩盒的子元素的排列方式
+	  目前所有主流浏览器都不支持box-orient属性。
+	  Firefox通过私有属性- MOZ-box-orient支持。
+	  Safari, Opera, 和 Chrome通过
+	  私有属性 -webkit-box-orient 支持.
+	*/
+	/*值为vertical表示从顶部向底部垂直布置子元素*/
+	-webkit-box-orient: vertical;
+	/*设置要出现省略号的行数
+	  下面的3表示第三行出现省略号
+	*/
+	-webkit-line-clamp: 5;
+	/*设置一个行高，更容易控制行数
+	  行高/元素高度=设置出现省略号的行数
+	  然后超出的部分隐藏起来  
+	*/
+	line-height: 30px;
+	/*超出高度的部分都隐藏起来
+	  目的主要是将设置了省略号那一行后面的内容都隐藏起来  
+	*/
+	overflow-y: hidden;
+}

@@ -1,0 +1,18 @@
+#start-page {
+	width: 100vw;
+	height: 100vh;
+	/* background-color: #000; */
+	z-index: 999;
+	font-size: 0;
+	overflow: hidden;
+}
+
+#start-page ::-webkit-scrollbar {
+	width: 0;
+}
+
+#start-page>img {
+	width: 100vw;
+	object-fit: fill;
+	font-size: 0;
+}

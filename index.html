@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="index-css.css">
+		<link rel="stylesheet" href="css/wrapper.css">
+		<link rel="stylesheet" href="css/collect.css">
+		<link rel="stylesheet" href="css/nav.css">
+		<link rel="stylesheet" href="css/start-page.css">
+		<script src="js/wrapper.js"></script>
+
+	</head>
+	<body>
+		<div id="start-page">
+			<img src="img/bg (1).webp" alt="">
+		</div>
+
+		<div class="main">
+			<div class="nav">
+				<!-- 个人头像 -->
+				<div class="head-img-box"><img src="img/head.png" alt=""></div>
+
+				<!-- 导航按钮 -->
+				<div class="nav-btn">
+					<!-- 主要分类的按钮 -->
+					<div class="item">
+						<div class="l-ico"><img src="img/ico/nav2/home.png" alt=""></div>
+						<div class="r-text">主页</div>
+					</div>
+					<div class="item">
+						<div class="l-ico"><img src="img/ico/nav2/hobby.png" alt=""></div>
+						<div class="r-text">爱好</div>
+					</div>
+					<div class="item">
+						<div class="l-ico"><img src="img/ico/nav2/study.png" alt=""></div>
+						<div class="r-text">学习</div>
+					</div>
+					<div class="item">
+						<div class="l-ico"><img src="img/ico/nav2/music.png" alt=""></div>
+						<div class="r-text">音乐</div>
+					</div>
+					<div class="item" onclick="window.location.href = 'sport.html'">
+						<div class="l-ico"><img src="img/ico/nav2/sport.png" alt=""></div>
+						<div class="r-text">运动</div>
+					</div>
+					<div class="item">
+						<div class="l-ico"><img src="img/ico/nav2/movie.png" alt=""></div>
+						<div class="r-text">电影</div>
+					</div>
+					<div class="item" id="nav-btn-collect">
+						<div class="l-ico"><img src="img/ico/nav2/collect.png" alt=""></div>
+						<div class="r-text">收藏</div>
+					</div>
+
+					<!-- 设置等按钮 -->
+					<div id="setting-btn">
+						<div class="l-ico"><img src="img/ico/setting.png" alt=""></div>
+						<div class="r-text">设置</div>
+
+						<!-- menu -->
+						<div id="setting-menu">
+							<p>顶部固定</p>
+							<p>反向轮播</p>
+							<p>网站静音</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- nav end -->
+
+			<div class="status">
+				<div class="status-left">
+					<div><img id="logo-img" src="img/logo.png" alt=""></div>
+					<!-- <div><span>太阳博客</span></div> -->
+				</div>
+				<div class="status-center">
+					<p>从巴比伦的高处来，燃烧成太阳吧！</p>
+					<!-- <div><img id="logo-img" src="img/logo.png" alt=""></div> -->
+				</div>
+				<div class="status-right">
+					<div><input id="search-text" type="text"></div>
+					<div><img id="search-ico" src="img/ico/status/search.png" alt=""></div>
+					<!-- <button id="search-btn">搜索</button> -->
+					<div><img src="img/ico/status/message.png" alt=""></div>
+					<div><img src="img/ico/status/dark.png" alt=""></div>
+					<div><img src="img/ico/status/setting.png" alt=""></div>
+					<empty id="empty"></empty>
+				</div>
+
+
+			</div>
+
+			<!-- 用于跳转 -->
+			<a id="target-home"></a>
+
+
+			<div class="content-box">
+				<div class="content">
+					<div class="info-card">
+						<div class="info-card-top">
+							<img src="img/head.png" alt="">
+						</div>
+
+						<div class="info-card-bottom">
+							<p></p>
+							<div>徐才志</div>
+							<div>QQ:780975117</div>
+							<div>Phone:19881368136</div>
+						</div>
+					</div>
+					<!-- .info-card end -->
+
+					<!-- 整个轮播图 -->
+					<div id="wrapper">
+						<!-- 轮播图的kuangj -->
+						<div id="img-box">
+							<img src="img/wrapper/1080P/0001.jpg" alt="" id="prev-img">
+							<img src="img/wrapper/1080P/0002.jpg" alt="" id="curr-img">
+							<img src="img/wrapper/1080P/0003.jpg" alt="" id="next-img">
+						</div>
+						<!-- 左右切换的按钮 -->
+						<div id="btn-box">
+							<div><button id="prev-btn"><img src="img/ico/arrow_left.png" alt=""></button></div>
+							<div><button id="next-btn"><img src="img/ico/arrow_right.png" alt=""></button></div>
+						</div>
+						<!-- 小圆点 -->
+						<div id="dot-box">
+
+						</div>
+					</div>
+					<!-- #wrapper end -->
+				</div>
+				<!-- .content end -->
+
+
+				<!-- 介绍栏  js生成其子元素 采用grid布局 -->
+				<div class="preview-box"></div>
+
+				<!-- 介绍栏的加载按钮 -->
+				<div class="preview-loadmore"></div>
+			</div>
+			<!-- .ontent-box end -->
+
+
+			<!-- 收藏夹 -->
+			<div class="collect-box">
+				<!-- 折叠展开按钮 -->
+				<div id="collect-spread-btn">
+					<!-- <img src="img/collect/open.png" alt=""> -->
+				</div>
+				<!-- 标题 -->
+				<div id="collect-tools">
+					<div id="collect-close">
+						<img src="img/collect/open.png" alt="">
+					</div>
+					<div>排序</div>
+					<div>筛选</div>
+					<div>添加</div>
+					<div>选择</div>
+				</div>
+
+				<!-- 内容  目前js生成 -->
+				<div id="collect-items">
+
+				</div>
+
+				<!-- more 加载更多的按钮-->
+				<div id="collect-morebtn">
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</body>
+	<!-- 该文件目前没有内容 -->
+	<script src="js/index-js.js"></script>
+	<!-- 导航栏 -->
+	<script src="js/nav.js"></script>
+	<!-- 顶部栏 -->
+	<script src="js/status.js"></script>
+	<!-- 介绍  在content的底部 -->
+	<script src="js/preview.js"></script>
+	<!-- 收藏夹  默认背隐藏  两种方式打开 -->
+	<script src="js/collect.js"></script>
+	<!-- 启动页 -->
+	<script src="js/startPage.js"></script>
+</html>

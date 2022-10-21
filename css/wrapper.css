@@ -1,0 +1,132 @@
+:root {
+	--box-boder-radius: 10px;
+	--shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+#wrapper {
+	width: 1000px;
+	min-width: 1000px;
+	height: 500px;
+	overflow: hidden;
+
+	/* display: inline-block; */
+	position: relative;
+	/* left: 10px; */
+	/* right: 10px; */
+	/* margin-left: 10px; */
+
+	border-radius: 10px;
+	box-shadow: var(--shadow);
+
+}
+
+#img-box {
+	width: 3000px;
+	height: 100%;
+	font-size: 0;
+	position: relative;
+	left: -1000px;
+}
+
+#img-box>img {
+	width: 1000px;
+	height: 500px;
+	position: absolute;
+	transition: left .8s;
+	object-fit: cover;
+
+}
+
+#prev-img {
+	left: 0;
+}
+
+#curr-img {
+	left: 1000px;
+}
+
+#next-img {
+	left: 2000px;
+}
+
+
+
+#btn-box {
+	width: 1000px;
+	height: 500px;
+
+	position: absolute;
+	top: 0;
+}
+
+#prev-btn,
+#next-btn {
+	width: 50px;
+	height: 500px;
+
+	/* opacity: 0.5; */
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+
+	z-index: 10;
+}
+
+#prev-btn {
+	left: 0;
+}
+
+#next-btn {
+	right: 0;
+}
+
+#btn-box img {
+	width: 50px;
+	height: 50px;
+	opacity: 0.5;
+	transition: opacity .3s;
+	transition: transform .3s;
+}
+
+
+#btn-box img:hover {
+	transform: scale(1.1);
+	opacity: 1;
+}
+
+#dot-box {
+	width: 1000px;
+	height: 30px;
+
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding-bottom: 5px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+
+	z-index: 10;
+}
+
+#dot-box>div {
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	margin: 2px;
+	border-radius: 5px;
+	opacity: 0.5;
+}
+
+#dot-box>div:hover {
+	transform: scale(1.2);
+	background-color: #9effef;
+}
